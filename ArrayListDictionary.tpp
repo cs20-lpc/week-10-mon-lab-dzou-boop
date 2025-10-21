@@ -27,6 +27,7 @@ ArrayListDictionary<Key, Val>::~ArrayListDictionary() {
 template <typename Key, typename Val>
 Val ArrayListDictionary<Key, Val>::binSearchIter(const Key& target, int left, int right) const {
     // TODO
+    
 }
 
 template <typename Key, typename Val>
@@ -89,6 +90,13 @@ void ArrayListDictionary<Key, Val>::remove(const Key& k) {
 template <typename Key, typename Val>
 Val ArrayListDictionary<Key, Val>::seqSearchIter(const Key& target) const {
     // TODO
+    for (int i = 0; i < list->getLength(); i++) {
+        if (list->getElement(i).k == target) {
+            return list->getElement(i).v;
+        }
+    }
+
+    cout << "No such item in dictionary." << endl;
 }
 
 template <typename Key, typename Val>
